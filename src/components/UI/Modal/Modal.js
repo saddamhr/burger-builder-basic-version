@@ -9,9 +9,9 @@ class modal extends Component {
         return nextPops.show !== this.props.show;
     }
 
-    componentWillUpdate() {
-        console.log('[Modal.js] willUpdate')
-    }
+    // componentWillUpdate() {
+    //     console.log('[Modal.js] willUpdate')
+    // }
 
     render() {
         return (
