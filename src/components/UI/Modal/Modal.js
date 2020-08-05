@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 
-import classes from './Modal.css'
-import Aux from '../../../hoc/Auxiliary/Auxiliary'
-import Backdrop from '../Backdrop/Backdrop'
+import classes from './Modal.css';
+import Aux from '../../../hoc/Auxiliary/Auxiliary';
+import Backdrop from '../Backdrop/Backdrop';
 
-class modal extends Component {
-    shouldComponentUpdate(nextPops, nextState) {
-        return nextPops.show !== this.props.show || nextPops.children !== this.props.children;
+class Modal extends Component {
+
+    shouldComponentUpdate ( nextProps, nextState ) {
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
-
-    // componentWillUpdate() {
-    //     console.log('[Modal.js] willUpdate')
-    // }
-
-    render() {
+    
+    render () {
         return (
             <Aux>
                 <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
@@ -30,4 +27,4 @@ class modal extends Component {
     }
 }
 
-export default modal;
+export default Modal;
